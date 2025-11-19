@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kannada Language Learning Bot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kannada Language Learning Bot</h1>
+            <p>Learn Kannada with AI assistance</p>
+        </header>
+
+        <!-- Translation Section -->
+        <section class="section translation-section">
+            <h2>📝 English to Kannada Translation</h2>
+            <div class="input-group">
+                <input type="text" id="translateInput" placeholder="Enter English text..." />
+                <button onclick="translateText()" class="btn btn-primary">Translate</button>
+            </div>
+            <div id="translationResult" class="result-box"></div>
+            <button id="speakBtn" onclick="speakKannada()" class="btn btn-audio" style="display:none;">
+                🔊 Hear Kannada
+            </button>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="section chat-section">
+            <h2>💬 Chat with Kannada Bot</h2>
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-message bot-message">
+                    <strong>Bot:</strong> ನಮಸ್ಕಾರ! Welcome! Type a message to start learning Kannada.
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatEnter(event)" />
+                <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+            </div>
+        </section>
+
+        <!-- Flashcards Section -->
+        <section class="section flashcards-section">
+            <h2>🎴 Kannada Flashcards</h2>
+            <div id="flashcardsContainer" class="flashcards-grid">
+                <p>Loading flashcards...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
